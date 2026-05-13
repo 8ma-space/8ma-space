@@ -1,0 +1,48 @@
+[build]
+  publish = "."
+
+# ── Redirects ──────────────────────────────────────────────────────────────
+
+# www → apex (canonical domain)
+[[redirects]]
+  from   = "https://www.8ma.space/*"
+  to     = "https://8ma.space/:splat"
+  status = 301
+  force  = true
+
+# Strip .html extension (clean URLs)
+[[redirects]]
+  from   = "/*.html"
+  to     = "/:splat"
+  status = 301
+
+# ── Headers ────────────────────────────────────────────────────────────────
+
+# HTML pages — no cache (always fresh)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Root
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Static assets — cache for 1 year (fingerprinted by Netlify)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security headers on everything
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options              = "SAMEORIGIN"
+    X-Content-Type-Options       = "nosniff"
+    X-XSS-Protection             = "1; mode=block"
+    Referrer-Policy              = "strict-origin-when-cross-origin"
+    Permissions-Policy           = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security    = "max-age=31536000; includeSubDomains; preload"
