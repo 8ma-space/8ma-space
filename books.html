@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Books - 8Ma Space</title>
+<meta name="description" content="Forthcoming books from Natasa - psychosomatic guides and a debut novel. Join the waiting list to be first to read." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="assets/photos/logo.png" alt="" class="brand-logo" />8Ma Space</a>
+    <button class="nav-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="challenge.html">Challenge</a>
+      <a href="program.html">Program</a>
+      <a href="books.html">Books</a>
+      <a href="members.html">Members</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="nav-cta">Book a Session</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <span class="eyebrow">Books</span>
+    <h1>What I'm writing.</h1>
+    <p class="hero-sub">
+      Three forthcoming books - two psychosomatic guides and one novel. Each one is on its way. Join the waiting list for any of them and you'll be first to know when it lands, plus get a small preview before launch.
+    </p>
+  </section>
+
+  <!-- BOOKS LIST -->
+  <section style="padding-top: 0;">
+    <div class="container">
+
+      <!-- BOOK 1: When Nothing Is Guaranteed -->
+      <div class="book-row">
+        <div>
+          <div class="book-cover-image">
+            <img src="assets/photos/book-nothing.jpg" alt="When Nothing Is Guaranteed - book cover" />
+          </div>
+        </div>
+        <div>
+          <span class="coming-soon">Coming Soon</span>
+          <h2>When Nothing Is Guaranteed</h2>
+          <p style="font-style: italic; color: var(--muted);">The High Achiever's Psychosomatic Guide to Stability, Clarity, and Certainty Under Pressure.</p>
+          <p>For the leaders, founders, and providers operating in environments where the ground keeps shifting - and "just push through" is no longer a survivable strategy. This is the field manual for staying clear-headed, regulated, and effective when the conditions don't cooperate.</p>
+          <p>Built from years of psychosomatic 1:1 work with high performers, it pairs nervous-system science with practical tools you can use in the middle of a hard week - not just on a quiet retreat.</p>
+
+          <form
+            class="signup-form left"
+            name="waitlist-when-nothing-is-guaranteed"
+            method="POST"
+            data-netlify="true"
+            data-success-id="waitNothing"
+            action="/thank-you.html"
+          >
+            <input type="hidden" name="form-name" value="waitlist-when-nothing-is-guaranteed" />
+            <p style="display:none;"><label>Don't fill: <input name="bot-field" /></label></p>
+            <input type="text" name="firstName" placeholder="First name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <button type="submit" class="btn">Join the Waitlist</button>
+          </form>
+          <p class="form-note" style="text-align: left;">Early readers get a sample chapter and launch-week pricing.</p>
+          <div class="form-success" id="waitNothing" style="margin-top: 16px;">
+            ✓ You're on the list. Sample chapter on its way as we get closer.
+          </div>
+        </div>
+      </div>
+
+      <!-- BOOK 2: The Body That Gave Life -->
+      <div class="book-row reverse">
+        <div>
+          <div class="book-cover-image">
+            <img src="assets/photos/book-guide.jpg" alt="The Body That Gave Life - book cover" />
+          </div>
+        </div>
+        <div>
+          <span class="coming-soon">Coming Soon</span>
+          <h2>The Body That Gave Life</h2>
+          <p style="font-style: italic; color: var(--muted);">A Psychosomatic Guide for Moms to Healing and Recovery.</p>
+          <p>For the mothers running on adrenaline, fumes, and good intentions - a body-first guide to coming back to yourself without leaving the people you love behind. Written for the season when there's no time for a 90-day silent retreat, but every cell is asking for one.</p>
+          <p>Inside: short, doable somatic practices; nervous-system tools that fit between feedings, school runs, and Slack pings; and the honest truth about what recovery actually looks like in real-life motherhood.</p>
+
+          <form
+            class="signup-form left"
+            name="waitlist-recovery-guide"
+            method="POST"
+            data-netlify="true"
+            data-success-id="waitRecovery"
+            action="/thank-you.html"
+          >
+            <input type="hidden" name="form-name" value="waitlist-recovery-guide" />
+            <p style="display:none;"><label>Don't fill: <input name="bot-field" /></label></p>
+            <input type="text" name="firstName" placeholder="First name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <button type="submit" class="btn">Join the Waitlist</button>
+          </form>
+          <p class="form-note" style="text-align: left;">No spam. One short note when <em>The Body That Gave Life</em> is ready.</p>
+          <div class="form-success" id="waitRecovery" style="margin-top: 16px;">
+            ✓ You're on the list. I'll be in touch as we get closer to launch.
+          </div>
+        </div>
+      </div>
+
+      <!-- BOOK 3: Fake Unicorn (novel) -->
+      <div class="book-row">
+        <div>
+          <div class="book-cover-image">
+            <img src="assets/photos/book-fake.jpg" alt="Fake Unicorn - book cover" />
+          </div>
+        </div>
+        <div>
+          <span class="coming-soon">Coming Soon</span>
+          <h2>Fake Unicorn</h2>
+          <p>A novel about a woman who builds the life everyone admires - the kind of life that looks like a unicorn from the outside - and the slow, sharp unravelling of what it actually cost her to keep it shining.</p>
+          <p>Part character study, part interior excavation, part love letter to the women who finally stop performing. If you've ever looked successful from the outside and felt hollow on the inside, this one is for you.</p>
+
+          <form
+            class="signup-form left"
+            name="waitlist-fake-unicorn"
+            method="POST"
+            data-netlify="true"
+            data-success-id="waitUnicorn"
+            action="/thank-you.html"
+          >
+            <input type="hidden" name="form-name" value="waitlist-fake-unicorn" />
+            <p style="display:none;"><label>Don't fill: <input name="bot-field" /></label></p>
+            <input type="text" name="firstName" placeholder="First name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <button type="submit" class="btn">Join the Waitlist</button>
+          </form>
+          <p class="form-note" style="text-align: left;">First chapter goes to waitlist subscribers before public release.</p>
+          <div class="form-success" id="waitUnicorn" style="margin-top: 16px;">
+            ✓ You're on the list. The first chapter will land in your inbox before launch.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALL THREE -->
+  <section class="section-soft text-center">
+    <div class="container narrow">
+      <span class="eyebrow">Want all three?</span>
+      <h2>Join one waitlist - choose more later.</h2>
+      <p>If you'd like updates for all three books in one go, sign up for the newsletter and tell me which ones you're waiting on.</p>
+
+      <form
+        class="signup-form"
+        name="newsletter"
+        method="POST"
+        data-netlify="true"
+        data-success-id="booksNewsletterSuccess"
+        action="/thank-you.html"
+        style="margin-top: 24px;"
+      >
+        <input type="hidden" name="form-name" value="newsletter" />
+        <p style="display:none;"><label>Don't fill: <input name="bot-field" /></label></p>
+        <input type="email" name="email" placeholder="Your email address" required />
+        <button type="submit" class="btn">Subscribe to Newsletter</button>
+      </form>
+      <p class="form-note">No spam. One thoughtful note a week.</p>
+      <div class="form-success" id="booksNewsletterSuccess" style="margin: 16px auto 0;">
+        ✓ Welcome. Check your inbox to confirm.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span class="brand"><img src="assets/photos/logo.png" alt="" class="brand-logo" />8Ma Space</span>
+    <p style="opacity: 0.85;">From high pressure to steady ground - one small practice at a time.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="challenge.html">Challenge</a>
+      <a href="program.html">Program</a>
+      <a href="books.html">Books</a>
+      <a href="booking.html">Book a Session</a>
+      <a href="members.html">Members</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/8ma.space/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.facebook.com/8ma.space" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.linkedin.com/company/8ma" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+    <small>© <span id="year"></span> 8Ma Space · All rights reserved.</small>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
+                                                                                                                                                                                                             
