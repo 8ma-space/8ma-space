@@ -3,46 +3,56 @@
 
 # ── Redirects ──────────────────────────────────────────────────────────────
 
-# www → apex (canonical domain)
+# www → apex (canonical domain consolidation for SEO)
 [[redirects]]
   from   = "https://www.8ma.space/*"
   to     = "https://8ma.space/:splat"
   status = 301
   force  = true
 
-# Strip .html extension (clean URLs)
-[[redirects]]
-  from   = "/*.html"
-  to     = "/:splat"
-  status = 301
-
 # ── Headers ────────────────────────────────────────────────────────────────
 
-# HTML pages — no cache (always fresh)
+# HTML pages — no cache (always fresh, prevents stale content in Google)
 [[headers]]
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Root
+# Root index
 [[headers]]
   for = "/"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Static assets — cache for 1 year (fingerprinted by Netlify)
+# Static assets — 1-year immutable cache (hashed by Netlify CDN)
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/style.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Security headers on everything
+[[headers]]
+  for = "/assets/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Blog static assets
+[[headers]]
+  for = "/blog/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Security + SEO headers on all responses
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options              = "SAMEORIGIN"
-    X-Content-Type-Options       = "nosniff"
-    X-XSS-Protection             = "1; mode=block"
-    Referrer-Policy              = "strict-origin-when-cross-origin"
-    Permissions-Policy           = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security    = "max-age=31536000; includeSubDomains; preload"
+    X-Frame-Options           = "SAMEORIGIN"
+    X-Content-Type-Options    = "nosniff"
+    X-XSS-Protection          = "1; mode=block"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    Permissions-Policy        = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
