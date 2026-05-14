@@ -36,11 +36,17 @@
     }
   });
 
-  // ------- Form handler (Web3Forms) -------
+  // ------- Form handler -------
+  // Challenge forms → Netlify function (triggers MailerLite 3-day sequence)
+  // All other forms → Web3Forms (admin notification)
   document.querySelectorAll("form.signup-form, form.contact-form").forEach(function (form) {
     var successId = form.dataset.successId;
     var success   = successId ? document.getElementById(successId) : null;
     var submitBtn = form.querySelector('[type="submit"]');
+    var isChallenge = form.dataset.handler === "challenge";
+    var endpoint  = isChallenge
+      ? "/.netlify/functions/challenge-signup"
+      : "https://api.web3forms.com/submit";
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -55,7 +61,7 @@
         submitBtn.textContent = "Sending…";
       }
 
-      fetch("https://api.web3forms.com/submit", {
+      fetch(endpoint, {
         method: "POST",
         body: new FormData(form)
       })

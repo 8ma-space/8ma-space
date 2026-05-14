@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Day 1 of 3 — Your first practice</title>
+<style>
+  body { margin: 0; padding: 0; background: #f5f2ee; font-family: 'Georgia', serif; color: #1f1d1a; }
+  .wrap { max-width: 560px; margin: 40px auto; background: #fff; border-radius: 8px; overflow: hidden; }
+  .header { background: #1f1d1a; padding: 32px 40px; }
+  .header a { color: #c89b6a; font-size: 1.1rem; font-weight: 600; text-decoration: none; letter-spacing: 0.05em; }
+  .body { padding: 40px; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.2em; color: #c89b6a; margin-bottom: 8px; }
+  h1 { font-size: 1.6rem; font-weight: 400; line-height: 1.35; margin: 0 0 24px; }
+  p { font-size: 1rem; line-height: 1.75; margin: 0 0 18px; color: #3a3835; }
+  .practice-box { background: #f5f2ee; border-left: 3px solid #c89b6a; border-radius: 4px; padding: 24px 28px; margin: 28px 0; }
+  .practice-box p { margin: 0 0 12px; }
+  .practice-box p:last-child { margin: 0; }
+  .practice-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: #c89b6a; margin-bottom: 12px; display: block; }
+  .cta-btn { display: inline-block; background: #1f1d1a; color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px; }
+  .footer { padding: 24px 40px; background: #f5f2ee; font-size: 0.8rem; color: #8a8480; line-height: 1.6; }
+  .footer a { color: #8a8480; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <a href="https://8ma.space">8Ma Space</a>
+  </div>
+
+  <div class="body">
+    <p class="eyebrow">Day 1 of 3 — The 3-Day Challenge</p>
+    <h1>Where does the pressure actually live?</h1>
+
+    <p>Hi {$subscriber.name | default: "there"},</p>
+
+    <p>Welcome to Day 1. I'm glad you're here.</p>
+
+    <p>Most people who carry chronic pressure have been carrying it for so long they've stopped noticing it. It becomes background noise — a low hum of urgency, tightness, or vigilance that feels like just how life is. Today's practice is about making that invisible thing visible.</p>
+
+    <p>It takes about three minutes. You can do it right now, or at any quiet moment today — before a meeting, after lunch, or just before bed.</p>
+
+    <div class="practice-box">
+      <span class="practice-title">Today's Practice — The Pressure Map</span>
+      <p>Find somewhere to sit without your phone in your hand. Close your eyes or soften your gaze downward. Take two slow breaths — just to arrive.</p>
+      <p>Then ask yourself: <em>Where in my body do I feel the pressure right now?</em></p>
+      <p>Don't analyze it. Just notice. Is it in your chest? Your jaw? Your shoulders? Your stomach? Somewhere else? Scan slowly from your head downward and notice where you feel tightness, heaviness, or holding.</p>
+      <p>When you find it, just acknowledge it. Place a hand there if that feels natural. You don't need to fix it. You're just making contact with something that's been trying to get your attention.</p>
+      <p>Stay with it for 60 seconds. Then breathe out slowly and open your eyes.</p>
+      <p><strong>That's it. You've done Day 1.</strong></p>
+    </div>
+
+    <p>This practice matters because most stress-management approaches try to change what you're thinking. This works differently — it starts with the body, where pressure actually lives. The act of noticing without trying to fix is itself a regulation signal. Your nervous system responds to it.</p>
+
+    <p>Tomorrow you'll get a tool that actively discharges what you found today. Make sure to check your inbox.</p>
+
+    <p style="margin-top: 28px;">With care,<br /><strong>Natasa</strong><br /><span style="font-size: 0.9rem; color: #8a8480;">8Ma Space</span></p>
+
+    <p style="margin-top: 32px; padding-top: 24px; border-top: 1px solid #e8e4df; font-size: 0.88rem; color: #8a8480;">
+      Want to go deeper? The <a href="https://8ma.space/pressure-audit.html" style="color: #c89b6a;">Pressure Audit</a> takes 3 minutes and shows you exactly which pattern is driving your stress.
+    </p>
+  </div>
+
+  <div class="footer">
+    You're receiving this because you signed up for the free 3-Day Challenge at <a href="https://8ma.space">8ma.space</a>.<br />
+    <a href="{$unsubscribe}">Unsubscribe</a> anytime — no hard feelings.
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Day 3 of 3 — Building something that lasts</title>
+<style>
+  body { margin: 0; padding: 0; background: #f5f2ee; font-family: 'Georgia', serif; color: #1f1d1a; }
+  .wrap { max-width: 560px; margin: 40px auto; background: #fff; border-radius: 8px; overflow: hidden; }
+  .header { background: #1f1d1a; padding: 32px 40px; }
+  .header a { color: #c89b6a; font-size: 1.1rem; font-weight: 600; text-decoration: none; letter-spacing: 0.05em; }
+  .body { padding: 40px; }
+  .eyebrow { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.2em; color: #c89b6a; margin-bottom: 8px; }
+  h1 { font-size: 1.6rem; font-weight: 400; line-height: 1.35; margin: 0 0 24px; }
+  p { font-size: 1rem; line-height: 1.75; margin: 0 0 18px; color: #3a3835; }
+  .practice-box { background: #f5f2ee; border-left: 3px solid #c89b6a; border-radius: 4px; padding: 24px 28px; margin: 28px 0; }
+  .practice-box p { margin: 0 0 12px; }
+  .practice-box p:last-child { margin: 0; }
+  .practice-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: #c89b6a; margin-bottom: 12px; display: block; }
+  .cta-section { background: #1f1d1a; border-radius: 8px; padding: 32px; margin-top: 36px; text-align: center; }
+  .cta-section p { color: #c8c4bf; font-size: 0.95rem; margin-bottom: 20px; }
+  .cta-btn { display: inline-block; background: #c89b6a; color: #fff; text-decoration: none; padding: 14px 28px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .footer { padding: 24px 40px; background: #f5f2ee; font-size: 0.8rem; color: #8a8480; line-height: 1.6; }
+  .footer a { color: #8a8480; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <a href="https://8ma.space">8Ma Space</a>
+  </div>
+
+  <div class="body">
+    <p class="eyebrow">Day 3 of 3 — The 3-Day Challenge</p>
+    <h1>The practice that makes the other two stick.</h1>
+
+    <p>Hi {$subscriber.name | default: "there"},</p>
+
+    <p>You made it to Day 3. That matters — most people sign up for things like this and don't finish them. The fact that you're here tells me something about where you are right now.</p>
+
+    <p>Today's practice is different. It's not about discharging stress in the moment — it's about building a rhythm that keeps the nervous system from accumulating it in the first place.</p>
+
+    <p>I call it the Stability Check-in. It takes two minutes and works best if you anchor it to something you already do every day — morning coffee, the first minute at your desk, or just before you close your laptop at the end of the day.</p>
+
+    <div class="practice-box">
+      <span class="practice-title">Today's Practice — The Stability Check-in</span>
+      <p>At your chosen anchor moment, pause for two minutes and ask yourself three questions:</p>
+      <p><strong>1. Where is the pressure right now?</strong><br />Scan your body briefly — chest, jaw, shoulders, stomach. Just notice without judgment.</p>
+      <p><strong>2. What is the pressure actually about?</strong><br />Name it specifically. Not "everything" — one specific thing. The conversation you're avoiding, the decision you're delaying, the responsibility you're carrying silently.</p>
+      <p><strong>3. What is one small thing I can do to not add to this today?</strong><br />Not fix it. Not solve it. Just one small action that doesn't make it worse — or one thing you can consciously set down, even temporarily.</p>
+      <p>That's it. Two minutes. The same questions, every day.</p>
+    </div>
+
+    <p>Here's why this matters more than it sounds. Chronic pressure doesn't usually come from dramatic events — it accumulates through a hundred small moments of not checking in, not naming what's happening, and not making deliberate choices about what you're carrying. This practice creates a daily interruption in that accumulation.</p>
+
+    <p>Done consistently, this is the kind of shift that compounds. In a week, you start noticing patterns. In a month, you have language for what's happening in your body. In three months, you're making decisions from a fundamentally different baseline.</p>
+
+    <p>You now have three tools — the Pressure Map, the 4-6 Breath, and the Stability Check-in. They work best together, but any one of them used consistently will start to change your baseline.</p>
+
+    <p>This is the end of the challenge — but it doesn't have to be the end of the work.</p>
+
+    <div class="cta-section">
+      <p class="eyebrow" style="color: #c89b6a; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 12px;">If you want to go further</p>
+      <p>The Pressure Audit takes 3 minutes and identifies your dominant pressure pattern — where it lives, how it operates, and what to address first. It's free and gives you a clear starting point.</p>
+      <a href="https://8ma.space/pressure-audit.html" class="cta-btn">Take the Free Pressure Audit</a>
+    </div>
+
+    <p style="margin-top: 32px;">Thank you for showing up for three days. That's a real thing.</p>
+
+    <p>With care,<br /><strong>Natasa</strong><br /><span style="font-size: 0.9rem; color: #8a8480;">8Ma Space</span></p>
+  </div>
+
+  <div class="footer">
+    You're receiving this because you signed up for the free 3-Day Challenge at <a href="https://8ma.space">8ma.space</a>.<br />
+    <a href="{$unsubscribe}">Unsubscribe</a> anytime — no hard feelings.
+  </div>
+
+</div>
+</body>
+</html>
