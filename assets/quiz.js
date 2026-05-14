@@ -39,8 +39,8 @@
     var shell = el('div', { class: 'quiz-shell' });
 
     if (!done) {
-      // Progress
-      var pct = Math.round((this.idx / total) * 100);
+      // Progress — (idx+1)/total so Q1=12%, Q8=100%
+      var pct = Math.round(((this.idx + 1) / total) * 100);
       shell.appendChild(el('div', { class: 'quiz-progress' }, [
         el('span', null, ['Question ' + (this.idx + 1) + ' of ' + total]),
         el('span', null, [pct + '% complete'])
