@@ -42,8 +42,7 @@
       // Progress — (idx+1)/total so Q1=12%, Q8=100%
       var pct = Math.round(((this.idx + 1) / total) * 100);
       shell.appendChild(el('div', { class: 'quiz-progress' }, [
-        el('span', null, ['Question ' + (this.idx + 1) + ' of ' + total]),
-        el('span', null, [pct + '% complete'])
+        el('span', null, ['Question ' + (this.idx + 1) + ' of ' + total])
       ]));
       shell.appendChild(el('div', { class: 'quiz-bar' }, [
         el('div', { class: 'quiz-bar-fill', style: 'width:' + pct + '%' })
