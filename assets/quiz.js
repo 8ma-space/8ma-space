@@ -109,13 +109,41 @@
         class: 'signup-form',
         name: c.formName,
         method: 'POST',
-        'data-netlify': 'true',
+        'data-handler': 'quiz',
         action: '/thank-you.html',
-        style: 'margin: 28px auto 0;'
+        style: 'margin: 28px auto 0;',
+        onsubmit: function (e) {
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          var orig = btn ? btn.textContent : '';
+          if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+          fetch('/.netlify/functions/quiz-signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString()
+          })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d.success) {
+              form.style.display = 'none';
+              var thanks = el('p', { class: 'form-success visible', style: 'margin-top:16px;color:var(--accent);' },
+                ['✓ Your results are on their way to ' + form.querySelector('input[name="email"]').value + '. Check your inbox in a few minutes.']);
+              result.appendChild(thanks);
+            } else {
+              throw new Error(d.message || 'Submission failed');
+            }
+          })
+          .catch(function () {
+            if (btn) { btn.disabled = false; btn.textContent = orig || 'Send My Results'; }
+            alert('Something went wrong. Please email info@8ma.space directly.');
+          });
+        }
       });
       form.appendChild(el('input', { type: 'hidden', name: 'form-name', value: c.formName }));
       form.appendChild(el('input', { type: 'hidden', name: 'quiz-score', value: pct + '%' }));
       form.appendChild(el('input', { type: 'hidden', name: 'quiz-tier', value: tier.band }));
+      form.appendChild(el('input', { type: 'hidden', name: 'quiz-title', value: tier.title }));
+      form.appendChild(el('input', { type: 'hidden', name: 'quiz-description', value: tier.description }));
       var honey = el('p', { style: 'display:none;' });
       honey.appendChild(el('label', null, ['Don\'t fill: ', el('input', { name: 'bot-field' })]));
       form.appendChild(honey);
