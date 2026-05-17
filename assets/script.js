@@ -43,9 +43,11 @@
     var successId = form.dataset.successId;
     var success   = successId ? document.getElementById(successId) : null;
     var submitBtn = form.querySelector('[type="submit"]');
-    var isChallenge = form.dataset.handler === "challenge";
-    var endpoint  = isChallenge
+    var handler   = form.dataset.handler;
+    var endpoint  = handler === "challenge"
       ? "/.netlify/functions/challenge-signup"
+      : handler === "books-waitlist"
+      ? "/.netlify/functions/books-waitlist"
       : "https://api.web3forms.com/submit";
 
     form.addEventListener("submit", function (e) {
