@@ -63,9 +63,13 @@
         submitBtn.textContent = "Sending…";
       }
 
+      var isNetlifyFn = endpoint.indexOf('/.netlify/functions/') === 0;
       fetch(endpoint, {
         method: "POST",
-        body: new FormData(form)
+        headers: isNetlifyFn ? { "Content-Type": "application/x-www-form-urlencoded" } : {},
+        body: isNetlifyFn
+          ? new URLSearchParams(new FormData(form)).toString()
+          : new FormData(form)
       })
       .then(function (res) { return res.json(); })
       .then(function (data) {
