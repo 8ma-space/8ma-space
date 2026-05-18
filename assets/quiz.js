@@ -135,7 +135,7 @@
           })
           .catch(function () {
             if (btn) { btn.disabled = false; btn.textContent = orig || 'Send My Results'; }
-            alert('Something went wrong. Please email info@8ma.space directly.');
+            alert('Something went wrong. Please email natasa@8ma.space directly.');
           });
         }
       });
