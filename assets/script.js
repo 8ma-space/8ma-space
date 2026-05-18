@@ -89,7 +89,7 @@
           submitBtn.disabled = false;
           submitBtn.textContent = submitBtn.dataset.label || "Send";
         }
-        alert("Something went wrong. Please email info@8ma.space directly.");
+        alert("Something went wrong. Please email natasa@8ma.space directly.");
       });
     });
 
