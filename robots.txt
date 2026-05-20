@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /members.html
-Disallow: /thank-you.html
 
 Sitemap: https://8ma.space/sitemap.xml
